@@ -1,0 +1,6 @@
+-upar o banco de dados celke dentro de um novo db com o nome de mydatabase
+-upar a tabela produtos dentro do db(mydatabase) criado
+ worked
+-alguns arquivos desnecessarios upados
+ficarão como relatório de algumas idéias mais que tive :)
+-Harisson Braga m171
