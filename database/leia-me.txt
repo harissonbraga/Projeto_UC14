@@ -4,3 +4,5 @@
 -alguns arquivos desnecessarios upados
 ficarão como relatório de algumas idéias mais que tive :)
 -Harisson Braga m171
+-----------------
+atualizaçao arquivo sql unificado
