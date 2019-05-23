@@ -14,8 +14,8 @@ $result_produto = "INSERT INTO produtos (nome, cor, codigo, data_de_vencimento, 
 $resultado_produto = mysqli_query($conn, $result_produto);
 
 if(mysqli_insert_id($conn)){
-	$_SESSION['msg'] = "<p style='color:green;'>Produto cadastrado com sucesso</p>";
-	header("Location: index.php");
+	$_SESSION['msg'] = "<p style='color:green;'>Produto cadastrado com sucesso</p>"."b";
+	header("Location: cad_produto.php");
 }else{
 	$_SESSION['msg'] = "<p style='color:red;'>Produto não foi cadastrado com sucesso</p>";
 	header("Location: cad_produto.php");

@@ -1,0 +1,20 @@
+import org.junit.Before;
+import org.junit.Test;
+
+public class Login_Facebook {
+    
+	private static final String KEY = "webdriver.gecko.driver";
+	private static final String KEY = "C:\\\\Users\\\\181710062\\\\Desktop\\\\Automatizados\\\\eclipse\\\\geckodriver.exe";
+	
+	@Before
+	private void antes() {
+		
+
+	}
+	
+	@Test
+	public void test() {
+		
+	}
+
+}

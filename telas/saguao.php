@@ -9,6 +9,7 @@
         <?php
            
         ?>
+
         <h1></h1>
         
            
@@ -60,6 +61,20 @@
 <div id="div_referencialimagem2">
 
 <div id="div_referencialimagem">
+  <?php
+
+session_start();
+
+if(!empty($_SESSION['name'])){
+  echo "Olá ".$_SESSION['name'].", seja bem vindo(a)";
+  
+  
+}else{
+  $_SESSION['uname'] = "Chat e estoque";
+  header("Location: login.php");  
+  
+}
+?>
 
 
 

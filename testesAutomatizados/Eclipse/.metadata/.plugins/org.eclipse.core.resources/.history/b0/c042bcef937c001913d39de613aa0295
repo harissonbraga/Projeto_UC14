@@ -1,0 +1,75 @@
+package Testes;
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class CadastroCliente {
+
+	private static final String KEY = "webdriver.gecko.driver";
+	private static final String VALUE = "C:\\Users\\181710062\\Desktop\\Automatizados\\eclipse\\geckodriver.exe";
+	
+	FirefoxDriver pagina;
+	
+	@Before
+	public void antes() {
+		System.setProperty(KEY, VALUE);
+		
+		pagina = new FirefoxDriver();
+		pagina.get("http://localhost/webchat/home.php");
+	}
+	
+	@Test
+	public void test() {
+		WebElement mensagem = pagina.findElementByName("msg");
+		
+	
+		
+		msg.sendKeys("Mensagem Repetida");
+		
+		
+	
+		
+	
+		
+		
+		
+		WebElement enviar = pagina.findElementByXPath("/html/body/div/center/form/input");
+		enviar.click();
+		
+		
+		
+	//	/html/body/div[2]/table
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

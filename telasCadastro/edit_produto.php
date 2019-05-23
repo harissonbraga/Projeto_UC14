@@ -22,7 +22,7 @@ $row_produto = mysqli_fetch_assoc($resultado_produto);
 			unset($_SESSION['msg']);
 		}
 		?>
-		<form method="POST" action="proc_edit_usuario.php">
+		<form method="POST" action="proc_edit_produto.php">
 			<input type="hidden" name="id" value="<?php echo $row_produto['id']; ?>">
 			
 			<label>Nome: </label>

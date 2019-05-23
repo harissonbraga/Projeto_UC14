@@ -1,0 +1,27 @@
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class Google {
+	
+	FirefoxDriver pagina;
+	
+    @Before
+    public void antes() {
+    	System.setProperty("webdriver.gecko.driver", "C:\\Users\\181710062\\Desktop\\Automatizados\\eclipse\\geckodriver.exe");
+    }
+	@Test
+	public void test() {
+		
+		
+			
+		}
+	@After
+	public void depois() {
+		
+	}
+		
+	}
+
+

@@ -1,0 +1,33 @@
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Login_Facebook {
+    
+	private static final String KEY = "webdriver.gecko.driver";
+	private static final String VALUE = "C:\\\\Users\\\\181710062\\\\Desktop\\\\Automatizados\\\\eclipse\\\\geckodriver.exe";
+	
+	FirefoxDriver pagina; 
+	
+	@Before
+	public void antes() {
+		System.setProperty(KEY, VALUE);
+		pagina = new FirefoxDriver();
+		pagina.get("https://pt-br.facebook.com/");
+
+	}
+	
+	@Test
+	public void test() {
+		WebElement login = pagina.findElementByName("email");
+		WebElement senha = pagina.findElementByName("pass");
+		WebElement entrar = pagina.findElementById("u_0_2");
+		
+		login.sendKeys("harissonbraga987@hotmail.com");
+		senha.sendKeys("lulapresoamanha123");
+		entrar.click();
+		
+	}
+
+}

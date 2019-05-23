@@ -1,0 +1,76 @@
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class CadastroProduto {
+
+	private static final String KEY = "webdriver.gecko.driver";
+	private static final String VALUE = "C:\\Users\\assparremberger\\Documents\\Automatizados\\geckodriver.exe";
+	
+	FirefoxDriver pagina;
+	
+	@Before
+	public void antes() {
+		System.setProperty(KEY, VALUE);
+		
+		pagina = new FirefoxDriver();
+		pagina.get("http://localhost/uc13/store/frmProduto.php");
+	}
+	
+	@Test
+	public void test() {
+		WebElement nome = pagina.findElementByName("txtNome");
+		WebElement preco = pagina.findElementByName("txtPreco");
+		WebElement quantidade = pagina.findElementByName("txtQuantidade");
+		
+		nome.sendKeys("Fanta 2L");
+		preco.sendKeys("3,99");
+		quantidade.sendKeys("50");
+		
+		Select selCategoria = new 
+				Select( pagina.findElementByName("selCategoria"));
+		selCategoria.selectByIndex(1);
+		List<WebElement> radios = pagina.findElementsByName("rbPerecivel");
+		radios.get(1).click();
+		WebElement refrigerado = pagina.findElementByName("cbRefrigerado");
+	
+		if( refrigerado.isSelected() ) {
+			refrigerado.click();
+		}
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

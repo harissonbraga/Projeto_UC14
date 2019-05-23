@@ -1,0 +1,15 @@
+import org.junit.Before;
+import org.junit.Test;
+
+public class Google {
+    @Before
+    public void antes() {
+    	
+    }
+	@Test
+	public void test() {
+		
+		public void test();
+	}
+
+}

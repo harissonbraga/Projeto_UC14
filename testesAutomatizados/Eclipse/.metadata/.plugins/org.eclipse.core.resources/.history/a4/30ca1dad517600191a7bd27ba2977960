@@ -1,0 +1,13 @@
+import org.junit.Before;
+import org.junit.Test;
+
+public class Login_Facebook {
+
+	@Before
+	
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

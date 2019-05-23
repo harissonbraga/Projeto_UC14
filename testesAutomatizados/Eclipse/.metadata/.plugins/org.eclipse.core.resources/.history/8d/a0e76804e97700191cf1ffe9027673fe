@@ -1,0 +1,88 @@
+import java.util.List;
+
+import javax.swing.JOptionPane;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class CadastroCliente {
+
+	private static final String KEY = "webdriver.gecko.driver";
+	private static final String VALUE = "C:\\Users\\181710062\\Desktop\\Automatizados\\eclipse\\geckodriver.exe";
+	
+	FirefoxDriver pagina;
+	
+	@Before
+	public void antes() {
+		System.setProperty(KEY, VALUE);
+		
+		pagina = new FirefoxDriver();
+		pagina.get("http://localhost/uc13/store/frmCliente.php");
+	}
+	
+	@Test
+	public void test() {
+		WebElement nome = pagina.findElementByName("txtNome");
+		WebElement cpf = pagina.findElementByName("txtCPF");
+		WebElement email = pagina.findElementByName("txtEmail");
+		WebElement endereco = pagina.findElementByName("txtEndereco");
+		
+	
+		
+		nome.sendKeys("Jenuíno Falseável");
+		cpf.sendKeys("87594837261");
+		email.sendKeys("umhumanoverdadeiramentereal@hotmail.com");
+		endereco.sendKeys("rua do caráças número 210");
+		
+		Select selCidade = new 
+				Select( pagina.findElementByName("selCidade"));
+		selCidade.selectByIndex(1);
+		List<WebElement> radios = pagina.findElementsByName("rbSexo");
+		radios.get(1).click();
+		
+	
+		
+		
+		WebElement foto = pagina.findElementByName("foto");
+		foto.sendKeys("C:\\Users\\181710062\\Documents\\monstro-humano1.jpg");
+		
+		WebElement txtSenha = pagina.findElementByXPath("/html/body/div[2]/form/div[8]/input");
+		
+		
+		WebElement btnSalvar = pagina.findElementByXPath("/html/body/div[2]/form/div[11]/input[1]");
+		btnSalvar.click();
+		
+		
+		
+	//	/html/body/div[2]/table
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

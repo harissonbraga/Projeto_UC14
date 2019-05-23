@@ -1,0 +1,4 @@
+projeto atualizado corrigindo muitas imperfeições e implementando ostestes automatizados
+---------------------------------------
+nota: mudar o caminnho do link dos arquivos de teste do eclipse para o qual estiver com pasta,
+/servirá mais como um lembrete futuro.

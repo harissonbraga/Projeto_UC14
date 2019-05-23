@@ -1,0 +1,81 @@
+package Testes;
+
+
+import javax.swing.JOptionPane;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class MensagemChat {
+
+	private static final String KEY = "webdriver.gecko.driver";
+	private static final String VALUE = "C:\\Users\\pc-pc\\Desktop\\Automatizados\\eclipse\\geckodriver.exe";
+	
+	FirefoxDriver pagina;
+	
+	@Before
+	public void antes() {
+		System.setProperty(KEY, VALUE);
+		
+		pagina = new FirefoxDriver();
+		pagina.get("http://localhost/webchatPENULTIMO/home.php");
+	}
+	
+	@Test
+	public void test() {
+		WebElement mensagem = pagina.findElementByName("msg");
+		
+	
+		
+		mensagem.sendKeys("Mensagem Repetida");
+		
+		
+	
+		
+	
+		
+		
+		
+		WebElement enviar = pagina.findElementByXPath("/html/body/div/center/form/input");
+		enviar.click();
+		
+		if( pagina.toString().contains("0")) {
+			JOptionPane.showMessageDialog(null, "Teste realizado com sucesso!");
+			
+		}else {
+			JOptionPane.showMessageDialog(null, "Teste Falhou");
+		}
+		
+		
+	//	/html/body/div[2]/table
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

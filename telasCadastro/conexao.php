@@ -5,4 +5,4 @@ $senha = "senacrs";
 $dbname = "m171_06_Prisma";
 
 //Criar a conexao
-$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);  
+$conn = mysqli_connect($servidor, $usuario, $senha, $dbname);

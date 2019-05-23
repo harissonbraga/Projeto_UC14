@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Abr-2019 às 16:01
--- Versão do servidor: 10.1.37-MariaDB
--- versão do PHP: 7.3.0
+-- Generation Time: 23-Maio-2019 às 01:31
+-- Versão do servidor: 10.1.32-MariaDB
+-- PHP Version: 5.6.36
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -58,22 +58,20 @@ INSERT INTO `posts` (`id`, `msg`, `name`, `date`) VALUES
 
 CREATE TABLE `produtos` (
   `id` int(11) NOT NULL,
-  `nome` varchar(220) NOT NULL,
-  `cor` varchar(219) NOT NULL,
-  `codigo` varchar(218) NOT NULL,
-  `data_de_vencimento` varchar(217) NOT NULL,
+  `nome` varchar(220) CHARACTER SET utf8 NOT NULL,
+  `cor` varchar(220) CHARACTER SET utf8 NOT NULL,
+  `codigo` varchar(220) CHARACTER SET utf8 NOT NULL,
+  `data_de_vencimento` varchar(220) CHARACTER SET utf8 NOT NULL,
   `created` datetime NOT NULL,
-  `modified` datetime DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `modified` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `produtos`
 --
 
 INSERT INTO `produtos` (`id`, `nome`, `cor`, `codigo`, `data_de_vencimento`, `created`, `modified`) VALUES
-(0, 'gfdgfd', 'gfdgdfg', 'gfdgdf', 'gdfgdf', '2019-04-21 22:27:52', NULL),
-(0, 'fgdgdf', 'gdfgdf', 'gdfgdf', 'gdfgdf', '2019-04-21 22:31:06', NULL),
-(0, 'negocio', 've', 'rere', 'ewrwe', '2019-04-22 09:46:44', NULL);
+(2, 'gfdgdf', 'gfdgdf', 'gdfgdf', 'gdfgdf', '2019-05-22 20:26:57', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -112,6 +110,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `produtos`
+--
+ALTER TABLE `produtos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `signup`
 --
 ALTER TABLE `signup`
@@ -126,6 +130,12 @@ ALTER TABLE `signup`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=228;
+
+--
+-- AUTO_INCREMENT for table `produtos`
+--
+ALTER TABLE `produtos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `signup`

@@ -1,0 +1,11 @@
+import org.junit.Test;
+
+public class Google {
+    
+	
+	public void test() {
+		@Test
+		fail("Not yet implemented");
+	}
+
+}

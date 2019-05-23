@@ -24,7 +24,7 @@ if($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
 	echo "" .$row["name"]. " " .":: " . $row["msg"]." --"
 	 .$row["date"]. "<br>";
-    echo "<br>";  
+    echo "<br>"."0";  
    }
 } else { 
      echo "0 results";

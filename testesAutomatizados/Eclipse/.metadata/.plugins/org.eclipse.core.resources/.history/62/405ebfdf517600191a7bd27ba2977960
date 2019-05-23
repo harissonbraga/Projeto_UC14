@@ -1,0 +1,17 @@
+import org.junit.Before;
+import org.junit.Test;
+
+public class Login_Facebook {
+
+	@Before
+	private void antes() {
+		
+
+	}
+	
+	@Test
+	public void test() {
+		
+	}
+
+}
