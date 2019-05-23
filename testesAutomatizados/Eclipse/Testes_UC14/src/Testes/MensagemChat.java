@@ -42,7 +42,7 @@ public class MensagemChat {
 		WebElement enviar = pagina.findElementByXPath("/html/body/div/center/form/input");
 		enviar.click();
 		
-		if( pagina.toString().contains("0")) {
+		if( pagina.toString().contains("a")) {
 			JOptionPane.showMessageDialog(null, "Teste realizado com sucesso!");
 			
 		}else {
