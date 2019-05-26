@@ -2,3 +2,6 @@ projeto atualizado corrigindo muitas imperfeições e implementando ostestes aut
 ---------------------------------------
 nota: mudar o caminnho do link dos arquivos de teste do eclipse para o qual estiver com pasta,
 /servirá mais como um lembrete futuro.
+atualização: uparei novamente este projeto de pi em outro repositorio com nome projetouc14_2 com o desgin de edit produto atualizado
+---------------------------------
+o projeto continua...
